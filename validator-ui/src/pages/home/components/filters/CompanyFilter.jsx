@@ -1,6 +1,6 @@
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 
-import { useCompanyOptionsSelector } from '../../../../store/Company.selectors';
+import { useCompanyOptionsSelector } from '../../../../store/company.selectors';
 import { SORT_OPTIONS } from './constants';
 
 import { InputField } from '../../../../components/InputField/InputField';

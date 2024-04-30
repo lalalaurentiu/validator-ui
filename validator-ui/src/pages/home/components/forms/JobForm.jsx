@@ -206,18 +206,20 @@ export function JobForm({ ...props }) {
                 </div>
 
                 <div className="flex flex-col">
-                    <label>Tipul Jobului</label>
-                    <input
-                        className="
-                            border-input h-full w-full p-2
-                        "
-                        id="remote"
-                        placeholder="ex. Remote, Onsite"
-                        type="text"
-                        defaultValue={remote}
-                        onChange={changeHandler}
-                    />
+                <label htmlFor="remote">Tipul Jobului</label>
+                <select
+                    className="border-input h-full w-full p-2"
+                    id="remote"
+                    onChange={changeHandler}
+                    defaultValue={remote}
+                    multiple  // Enable multiple selection
+                >
+                    {['remote', 'on-site', 'hybrid'].map(choice => (
+                        <option key={choice} value={choice.toLowerCase()}>{choice}</option>
+                    ))}
+                </select>
                 </div>
+
 
                 <div>
                     <button
